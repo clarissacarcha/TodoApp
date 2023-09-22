@@ -3,11 +3,14 @@ import { StyleSheet, Text, View } from "react-native";
 import { Provider } from "react-redux";
 import { store } from "@/store";
 import { Navigation } from "@/navigation";
+import { Provider as PaperProvider } from "react-native-paper";
 
 export default function App() {
   return (
     <Provider store={store}>
-      <Navigation />
+      <PaperProvider>
+        <Navigation />
+      </PaperProvider>
     </Provider>
   );
 }
